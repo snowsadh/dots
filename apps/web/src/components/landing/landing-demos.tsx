@@ -13,7 +13,7 @@ export function LandingDemos() {
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           {content.description}
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-5">
+        <div className="mt-6 grid auto-cols-[160px] grid-flow-col gap-4 overflow-x-auto pb-2 lg:auto-cols-fr">
           {galleryContent.entries.slice(0, 5).map((entry) => (
             <a className="flex flex-col overflow-hidden rounded-sm border hover:border-foreground/40" download href={entry.source} key={entry.slug}>
               {/* eslint-disable-next-line @next/next/no-img-element -- static gallery asset */}
