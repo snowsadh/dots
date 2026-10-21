@@ -38,21 +38,10 @@ export const landingContent = {
     },
   },
   openDevelopment: {
-    eyebrow: "Built in the open",
-    title: "Make tactile maps easier to create, together.",
-    description:
-      "Explore the code, test a floor plan, or help improve model support and tactile validation. Every useful contribution can make the next building easier to navigate.",
     source: {
       label: "View source on GitHub",
       href: "https://github.com/snowsadh/dots",
     },
-    contribute: {
-      label: "Suggest an improvement",
-      href: "https://github.com/snowsadh/dots/issues",
-    },
-    licenseStatus: "Public source · application license pending",
-    licenseDetail:
-      "The application license is being finalized. Model licenses are listed separately.",
   },
   modelInformation: {
     title: "Current AI configuration",

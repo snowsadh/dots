@@ -35,8 +35,8 @@ export function ModelInformation() {
   }, []);
 
   return (
-    <div className="min-w-0 border-t border-foreground/15 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
-      <h3 className="text-xl font-medium tracking-tight sm:text-2xl">{content.title}</h3>
+    <div className="min-w-0">
+      <h2 className="text-xl font-medium tracking-tight sm:text-2xl" id="model-information-title">{content.title}</h2>
       {FRONTEND_ONLY && (
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">{content.preview}</p>
       )}
