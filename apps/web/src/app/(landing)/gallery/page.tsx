@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GalleryEntry } from "@/components/landing/gallery-entry";
+import { GalleryPrints } from "@/components/landing/gallery-prints";
 import { galleryContent } from "@/data/gallery";
 import { navigationContent } from "@/data/navigation";
 
@@ -18,6 +19,7 @@ export default function GalleryPage() {
       <p className="mt-3 max-w-3xl text-sm leading-6 text-muted-foreground">
         {galleryContent.plateDimensions}
       </p>
+      <GalleryPrints />
       {galleryContent.entries.length === 0 ? (
         <p className="mt-6 text-sm text-muted-foreground">
           {galleryContent.empty}

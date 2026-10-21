@@ -10,6 +10,23 @@ export type GalleryItem = {
 export const galleryContent = {
   downloadLabel: "Download STL",
   empty: "Showcase pieces are on their way.",
+  demoPrints: {
+    title: "Demo 3D prints",
+    description:
+      "Physical tactile-map demos with raised walls, braille dots, and navigation markers.",
+    photos: [
+      {
+        source: "/gallery/demo-print-handheld.jpg",
+        alt: "A mint-colored 3D-printed tactile map held in one hand, showing raised walls and braille dots.",
+        caption: "Handheld tactile-map demo",
+      },
+      {
+        source: "/gallery/demo-print-printer-bed.jpg",
+        alt: "A light-blue 3D-printed tactile map on a printer bed, with raised walls, braille dots, and navigation markers.",
+        caption: "Tactile-map demo on the printer bed",
+      },
+    ],
+  },
   entries: [
     {
       description:
