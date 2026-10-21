@@ -48,6 +48,12 @@ export const landingContent = {
       tail: "— it exports only at zero violations.",
     },
   },
+  demos: {
+    title: "Try a real demo",
+    description:
+      "Download a floor plan from the gallery and upload it when running dots locally.",
+    downloadLabel: "Download input",
+  },
   openDevelopment: {
     source: {
       label: "View source on GitHub",
