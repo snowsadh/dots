@@ -6,6 +6,17 @@ export const landingContent = {
     tagline:
       "Public source, configurable AI, and tactile maps that more people can help improve.",
     generationTime: "Allow 15–20 minutes to generate an output when running locally.",
+    inputHelp: {
+      prompt: "Don't have a floor plan?",
+      creator: {
+        label: "Create one with Floor Plan Creator",
+        href: "https://floorplancreator.net/",
+      },
+      demos: {
+        label: "Use a demo input from the gallery",
+        href: "https://github.com/snowsadh/dots/tree/main/demo-inputs",
+      },
+    },
     upload: {
       failed: "Upload failed. Try again.",
       backendUnavailable:
