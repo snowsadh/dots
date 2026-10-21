@@ -1,9 +1,3 @@
-**BANA and ADA standards — official PDFs**
-
-- [BANA Guidelines and Standards for Tactile Graphics, 2022 — accessible PDF](https://www.brailleauthority.org/sites/default/files/tg/Tactile%20Graphics%20Standards%20and%20Guidelines%202022_a11y.pdf)
-- [ADA Accessibility Standards — official PDF](https://www.access-board.gov/files/ada/ADA-Standards.pdf): see §703 for raised characters and braille requirements.
-- [ADA Chapter 7: Signs and braille specifications — illustrated guide PDF](https://www.access-board.gov/files/ada/guides/signs-ADA.pdf)
-
 <p align="center">
   <img src="apps/web/public/devpost-banner-v2.png" alt="A floor plan transformed into a raised tactile map with braille labels" width="100%" />
 </p>
@@ -28,6 +22,12 @@
 A sighted visitor can glance at a lobby map before entering an unfamiliar building. A blind visitor often has to ask for directions, memorize a verbal description, or learn the space by trial and error. A tactile map provides that missing mental model, but producing one is usually a slow, specialist commission that many libraries, schools, clinics, and small businesses cannot justify.
 
 dots automates the design bottleneck. A building owner uploads the floor plan they already have, reviews what the system understood, and receives printable map and braille-legend STL files. The goal is not to replace human judgment: it is to make a useful accessibility tool practical for far more buildings.
+
+**BANA and ADA standards — official PDFs**
+
+- [BANA Guidelines and Standards for Tactile Graphics, 2022 — accessible PDF](https://www.brailleauthority.org/sites/default/files/tg/Tactile%20Graphics%20Standards%20and%20Guidelines%202022_a11y.pdf)
+- [ADA Accessibility Standards — official PDF](https://www.access-board.gov/files/ada/ADA-Standards.pdf): see §703 for raised characters and braille requirements.
+- [ADA Chapter 7: Signs and braille specifications — illustrated guide PDF](https://www.access-board.gov/files/ada/guides/signs-ADA.pdf)
 
 ## What dots does
 
@@ -249,7 +249,7 @@ These links let reviewers inspect the source requirements, implementation, examp
 
 | Evidence | Where to inspect it | What it establishes |
 | --- | --- | --- |
-| Official standards | The BANA and ADA PDFs linked at the top | Source guidance used when implementing the geometry rules. |
+| Official standards | The BANA and ADA PDFs linked below “Why dots” | Source guidance used when implementing the geometry rules. |
 | Encoded checks | [Validator](packages/floor-model/src/validate.ts), [braille geometry](packages/floor-model/src/braille.ts), [per-rule report](packages/floor-model/src/validation-report.ts) | The exact rules, fixed dimensions, and measurements the app implements. |
 | Reproducible automated checks | [Validator tests](packages/floor-model/test/validate.test.ts), [report tests](packages/floor-model/test/validation-report.test.ts), [tactile conversion tests](packages/floor-model/test/tactile.test.ts) | Executable examples of passing designs and rejected violations. Run the verification commands above to reproduce them. |
 | Export restriction | [Export endpoint](apps/api/src/export.ts) | Export rejects a design whose stored validation result has remaining violations. |
