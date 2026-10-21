@@ -7,7 +7,7 @@ export function LandingDemos() {
   return (
     <section aria-labelledby="landing-demos-title" className="mx-auto max-w-5xl px-6 pb-10 pt-6">
       <div className="border-t border-foreground/15 pt-10">
-        <h2 className="text-2xl font-medium tracking-tight" id="landing-demos-title">
+        <h2 className="scroll-mt-24 text-2xl font-medium tracking-tight" id="landing-demos-title">
           {content.title}
         </h2>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">

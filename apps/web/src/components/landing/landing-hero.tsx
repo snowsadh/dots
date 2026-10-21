@@ -26,7 +26,7 @@ export function LandingHero() {
           {landingContent.hero.inputHelp.creator.label}
         </a>
       </p>
-      <a className="mt-1 inline-flex min-h-11 items-center text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground" href={landingContent.hero.inputHelp.demos.href} rel="noopener noreferrer" target="_blank">
+      <a className="mt-1 inline-flex min-h-11 items-center text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground" href={landingContent.hero.inputHelp.demos.href}>
         {landingContent.hero.inputHelp.demos.label}
       </a>
       <Button asChild className="mt-4 h-11 rounded-full px-6 text-base" variant="outline">

@@ -13,8 +13,8 @@ export const landingContent = {
         href: "https://floorplancreator.net/",
       },
       demos: {
-        label: "Use a demo input from the gallery",
-        href: "https://github.com/snowsadh/dots/tree/main/demo-inputs",
+        label: "Try one of these examples",
+        href: "#landing-demos-title",
       },
     },
     upload: {
@@ -49,7 +49,7 @@ export const landingContent = {
     },
   },
   demos: {
-    title: "Try a real demo",
+    title: "Try one of these examples",
     description:
       "Download a floor plan from the gallery and upload it when running dots locally.",
     downloadLabel: "Download input",
