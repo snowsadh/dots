@@ -1,0 +1,23 @@
+node_modules
+.DS_Store
+dist
+.serena
+pipeline_tests/corpus-cache/
+
+# Local configuration and generated build output.
+.env*
+!.env.example
+.next/
+*.tsbuildinfo
+coverage/
+*.log
+
+# Original evaluation corpus is not licensed for redistribution.
+pipeline_tests/assets/
+pipeline_tests/outputs/
+pipeline_tests/corpus-v2.json
+pipeline_tests/SOURCES.md
+pipeline_tests/REPORT.md
+apps/web/public/gallery/study-*
+test-assets/tactile-references/cch-visual-plan-level2.jpg
+test-assets/tactile-references/cch-visual-plan-level3.jpg
