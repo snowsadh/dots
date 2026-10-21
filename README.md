@@ -26,7 +26,7 @@ dots automates the design bottleneck. A building owner uploads the floor plan th
 1. **Upload:** Accept a PDF, PNG, JPG, or WebP floor plan up to 10 MB. PDFs are rasterized from the first page and large images are normalized for analysis.
 2. **Extract:** Vision-language model calls identify walls, rooms, doorways, stairs, elevators, entrances, labels, and other navigational features as structured JSON.
 3. **Review:** The system critiques its extraction against the source image, rechecks doorway crops, and presents the latest version on an editable canvas. Users can edit directly or describe a correction in plain English.
-4. **Convert:** Deterministic TypeScript creates the tactile plate, braille keys, symbols, relief layers, and legend, then validates the result against the encoded [BANA 2022](https://www.brailleauthority.org/guidelines-and-standards-tactile-graphics) and [ADA §703](https://www.access-board.gov/ada/guides/chapter-7-signs/) geometry rules.
+4. **Convert:** Deterministic TypeScript creates the tactile plate, braille keys, symbols, relief layers, and legend, then validates the result against the encoded [BANA 2022 (PDF)](https://www.brailleauthority.org/sites/default/files/tg/Tactile%20Graphics%20Standards%20and%20Guidelines%202022_a11y.pdf) and [ADA §703 (PDF)](https://www.access-board.gov/files/ada/ADA-Standards.pdf) geometry rules.
 5. **Export:** Only a design with zero remaining violations reaches Manifold mesh generation and becomes a watertight STL bundle.
 
 ### A real repository example
@@ -212,8 +212,9 @@ Next steps are durable object storage, multi-floor navigation, contracted braill
 
 ## Standards and project documents
 
-- [BANA Guidelines and Standards for Tactile Graphics, 2022](https://www.brailleauthority.org/guidelines-and-standards-tactile-graphics) ([accessible PDF](https://www.brailleauthority.org/sites/default/files/tg/Tactile%20Graphics%20Standards%20and%20Guidelines%202022_a11y.pdf))
-- [ADA Chapter 7: Signs and braille specifications](https://www.access-board.gov/ada/guides/chapter-7-signs/)
+- [BANA Guidelines and Standards for Tactile Graphics, 2022 — accessible PDF](https://www.brailleauthority.org/sites/default/files/tg/Tactile%20Graphics%20Standards%20and%20Guidelines%202022_a11y.pdf)
+- [ADA Accessibility Standards — official PDF](https://www.access-board.gov/files/ada/ADA-Standards.pdf): see §703 for raised characters and braille requirements.
+- [ADA Chapter 7: Signs and braille specifications — illustrated guide PDF](https://www.access-board.gov/files/ada/guides/signs-ADA.pdf)
 - [Product brief](docs/idea.md)
 - [Requirements and hackathon alignment](docs/requirements.md)
 - [Deployment notes](docs/deploy.md)
