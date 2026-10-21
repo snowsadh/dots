@@ -19,7 +19,7 @@ export function LandingDemos() {
               {/* eslint-disable-next-line @next/next/no-img-element -- static gallery asset */}
               <img
                 alt={`${entry.title} — ${galleryContent.sourceLabel}`}
-                className="aspect-square w-full border-b bg-white object-contain"
+                className="h-28 w-full border-b bg-white object-contain p-2"
                 loading="lazy"
                 src={entry.source}
               />
