@@ -2,7 +2,7 @@
   <img src="apps/web/public/devpost-banner-v2.png" alt="A floor plan transformed into a raised tactile map with braille labels" width="100%" />
 </p>
 
-<h1 align="center">trace</h1>
+<h1 align="center"><a href="https://dots-mu-eosin.vercel.app/">trace</a></h1>
 
 <p align="center">
   <strong>Floor plan in. Tactile map out.</strong><br />
