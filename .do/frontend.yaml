@@ -1,0 +1,42 @@
+# Frontend only. The existing Cloud Run API must be healthy before this can generate maps.
+name: dots
+region: sgp
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+services:
+  - name: web
+    git:
+      repo_clone_url: https://github.com/snowsadh/dots.git
+      branch: main
+    source_dir: /
+    dockerfile_path: apps/web/Dockerfile
+    http_port: 3000
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    health_check:
+      http_path: /
+    envs:
+      - key: PORT
+        value: "3000"
+        scope: RUN_TIME
+      - key: NEXT_PUBLIC_API_URL
+        value: https://bumps-api-vvrzkct7ua-el.a.run.app
+        scope: RUN_AND_BUILD_TIME
+      - key: AUTH_SECRET
+        value: ""
+        scope: RUN_TIME
+        type: SECRET
+      - key: AUTH_TRUST_HOST
+        value: "true"
+        scope: RUN_TIME
+      - key: AUTH_URL
+        value: ${APP_URL}
+        scope: RUN_TIME
+ingress:
+  rules:
+    - component:
+        name: web
+      match:
+        path:
+          prefix: /
