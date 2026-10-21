@@ -12,10 +12,6 @@ export const landingContent = {
         label: "Create one with Floor Plan Creator",
         href: "https://floorplancreator.net/",
       },
-      demos: {
-        label: "Try one of these examples",
-        href: "#landing-demos-title",
-      },
     },
     upload: {
       failed: "Upload failed. Try again.",

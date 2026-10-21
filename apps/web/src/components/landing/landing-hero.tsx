@@ -1,3 +1,4 @@
+import { LandingDemos } from "@/components/landing/landing-demos";
 import { UploadButton } from "@/components/landing/upload-button";
 import { Button } from "@/components/ui/button";
 import { landingContent } from "@/data/landing";
@@ -26,9 +27,7 @@ export function LandingHero() {
           {landingContent.hero.inputHelp.creator.label}
         </a>
       </p>
-      <a className="mt-1 inline-flex min-h-11 items-center text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground" href={landingContent.hero.inputHelp.demos.href}>
-        {landingContent.hero.inputHelp.demos.label}
-      </a>
+      <LandingDemos />
       <Button asChild className="mt-4 h-11 rounded-full px-6 text-base" variant="outline">
         <a href={landingContent.openDevelopment.source.href} rel="noopener noreferrer" target="_blank">
           {landingContent.openDevelopment.source.label}

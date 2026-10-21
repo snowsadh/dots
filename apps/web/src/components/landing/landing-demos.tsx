@@ -5,7 +5,7 @@ export function LandingDemos() {
   const content = landingContent.demos;
 
   return (
-    <section aria-labelledby="landing-demos-title" className="mx-auto max-w-5xl px-6 pb-10 pt-6">
+    <section aria-labelledby="landing-demos-title" className="mx-auto w-full max-w-5xl pb-10 pt-6 text-left">
       <div className="border-t border-foreground/15 pt-10">
         <h2 className="scroll-mt-24 text-2xl font-medium tracking-tight" id="landing-demos-title">
           {content.title}
