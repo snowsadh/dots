@@ -2,7 +2,7 @@
 
 **Goal:** tactile maps of real-world outdoor areas — parks, campuses, plazas — for governments and public institutions, without needing a floor plan file at all.
 
-**Depends on:** Phases 1–9 shipped (this reuses the whole pipeline). Post-submission stretch — do not start before Phase 10 is done.
+**Depends on:** Phases 1–10 complete (this reuses the verified local pipeline). Later stretch.
 
 ## Work
 

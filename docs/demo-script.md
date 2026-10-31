@@ -30,6 +30,6 @@ The agents make the decisions. The geometry engine enforces the rules.
 
 Finally, dots creates a watertight STL file. A standard 3D printer can print each plate flat without supports. Large maps use multiple plates that join into one readable map.
 
-This live backend runs on Google Cloud Run. Its logs show Gemini 3.7 Flash calls through Vertex AI and Google’s Agent Development Kit. A private Cloud SQL database stores the project data.
+This demo runs the web app, API, and PGlite database locally. The API calls Gemini 3.7 Flash through Vertex AI and Google’s Agent Development Kit.
 
 dots turns an existing floor plan into a printable tactile map in minutes. People can review the complete result and trust every measured feature.

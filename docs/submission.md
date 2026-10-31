@@ -1,5 +1,7 @@
 # Devpost submission text
 
+Historical draft from an earlier submission plan. Its hosted-service claims do not describe the current local-only requirements; see [requirements.md](requirements.md).
+
 **Track:** The Taskmaster
 
 ## Inspiration

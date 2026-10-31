@@ -1,5 +1,7 @@
 # Deploying dots
 
+Historical deployment notes from an earlier project phase. Deployment is not part of the current local-only requirements in [requirements.md](requirements.md).
+
 The web app runs on Vercel and Google Cloud Run. The Bun/Hono API and PostgreSQL database run in Render's Singapore region, with a second Google Cloud deployment for proof.
 
 ## API and database on Render

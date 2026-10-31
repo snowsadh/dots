@@ -1,5 +1,7 @@
 # Hackathon video proof checklist
 
+Historical checklist from an earlier submission plan. The current project is local-only and does not require cloud proof; see [requirements.md](requirements.md).
+
 The official requirements say the demo video must show the application working and visibly prove that its backend runs on Google Cloud. The video must be no longer than four minutes and must be publicly visible on YouTube or Vimeo.
 
 ## Open these tabs before recording

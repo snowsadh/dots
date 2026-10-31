@@ -10,14 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://bumps-phi.vercel.app"><strong>Try the live app</strong></a>
-  ·
-  <a href="https://bumps-web-1096378308677.asia-south1.run.app/">Google Cloud deployment</a>
-  ·
   <a href="output/pdf/bumps-technical-agent-architecture.pdf">Architecture PDF</a>
 </p>
 
-<!-- README-HACK:NEEDS-OWNER key="demo-video" instruction="Add the final public YouTube or Vimeo demo URL here." -->
+This project is developed and demonstrated locally. [Run it on your machine](#run-locally-and-reproduce-the-demo); no deployment is planned.
 
 ## Why dots
 
@@ -39,7 +35,7 @@ dots automates the design bottleneck. A building owner uploads the floor plan th
 | --- | --- |
 | ![A clear top-down library floor plan used as parser input](apps/web/public/gallery/test-library-floor-plan-source.png) | ![The corresponding raised tactile library design with braille keys and symbols](apps/web/public/gallery/test-library-floor-plan-design.svg) |
 
-The public gallery includes downloadable STLs for libraries, museums, offices, public restrooms, and other test plans. Each entry pairs its source plan with the printable result.
+The gallery includes downloadable STLs for libraries, museums, offices, public restrooms, and other test plans. Each entry pairs its source plan with the printable result.
 
 ## AI proposes. Geometry disposes.
 
@@ -57,7 +53,7 @@ The validator checks scale, minimum feature sizes, margins, seams, clearances, b
 
 [![Technical architecture showing the browser, Bun and Hono API, five Vertex AI agents, bounded review loops, Postgres persistence, deterministic tactile validation, and STL export](docs/graphs/technical-agent-architecture-readme.svg)](output/pdf/bumps-technical-agent-architecture.pdf)
 
-The Next.js browser app communicates with a Bun and Hono API. Background parse and tactile jobs persist their status and versioned JSON in PostgreSQL. Google ADK agents call Gemini through Vertex AI, but the shared floor-model package, validation engine, and Manifold mesh generator remain deterministic. Source images and generated STL files currently use the service filesystem and are therefore prototype-only across container replacements.
+The locally running Next.js app communicates with a Bun and Hono API on localhost. Background parse and tactile jobs persist their status and versioned JSON in PGlite. Google ADK agents call Gemini through Vertex AI, while the shared floor-model package, validation engine, and Manifold mesh generator remain deterministic. Source images and generated STL files remain on the local API filesystem.
 
 ## Built with
 
@@ -65,8 +61,7 @@ The Next.js browser app communicates with a Bun and Hono API. Background parse a
 - **Web:** Next.js 16, React 19, TypeScript, Tailwind CSS, Three.js
 - **API:** Bun, Hono, Zod, MuPDF, Resvg
 - **Geometry:** deterministic TypeScript, Manifold 3D, binary STL generation
-- **Data:** local PGlite or hosted PostgreSQL, Drizzle ORM, versioned floor-model JSON
-- **Cloud:** Vercel and Google Cloud Run; Render and Cloud SQL deployments; Cloud Build, Artifact Registry, Secret Manager
+- **Data:** local PGlite, Drizzle ORM, versioned floor-model JSON
 
 ## What floor plans can I use?
 
@@ -110,7 +105,7 @@ The frozen lockfile keeps the installed versions consistent with the tested repo
 
 ### 3. Use the local database
 
-The API uses PGlite in `apps/api/data/pglite` when `DATABASE_URL` is unset. It needs no database server or container. This local database is separate from the hosted PostgreSQL databases and does not modify their records.
+The API uses PGlite in `apps/api/data/pglite` when `DATABASE_URL` is unset. It needs no database server or container.
 
 ### 4. Authenticate with Vertex AI
 
@@ -204,14 +199,13 @@ Increasing either limit allows more agent repair attempts but also increases Ver
 
 ## Prototype boundaries and next steps
 
-The current product handles one floor per uploaded map and works best with clear, top-down architectural plans. Local PGlite or hosted PostgreSQL preserves project metadata and model versions, but source images and STL files still use ephemeral container storage on hosted services.
+The current product handles one floor per uploaded map and works best with clear, top-down architectural plans. Local PGlite preserves project metadata and model versions; source images and STL files remain on local disk.
 
-Next steps are durable object storage, multi-floor navigation, contracted braille and additional languages, more physical print testing with blind readers, and outdoor public-space input.
+Next steps are multi-floor navigation, contracted braille and additional languages, more physical print testing with blind readers, and outdoor public-space input.
 
 ## Standards and project documents
 
 - [BANA Guidelines and Standards for Tactile Graphics, 2022](https://www.brailleauthority.org/tg/)
 - [ADA Chapter 7: Signs and braille specifications](https://www.access-board.gov/ada/guides/chapter-7-signs/)
 - [Product brief](docs/idea.md)
-- [Requirements and hackathon alignment](docs/requirements.md)
-- [Deployment notes](docs/deploy.md)
+- [Local requirements](docs/requirements.md)
