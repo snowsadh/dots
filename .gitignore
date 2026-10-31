@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+.serena
+pipeline_tests/corpus-cache/
+
+# Local study media; keep the small fixtures used by unit tests tracked.
+pipeline_tests/assets/*
+!pipeline_tests/assets/psu-plan.pdf
+pipeline_tests/outputs/*
+!pipeline_tests/outputs/psu-input.png
+test-assets/tactile-references/*
+!test-assets/tactile-references/SOURCES.md
