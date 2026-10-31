@@ -13,8 +13,6 @@
   <a href="output/pdf/bumps-technical-agent-architecture.pdf">Architecture PDF</a>
 </p>
 
-This project is developed and demonstrated locally. [Run it on your machine](#run-locally-and-reproduce-the-demo); no deployment is planned.
-
 ## Why dots
 
 A sighted visitor can glance at a lobby map before entering an unfamiliar building. A blind visitor often has to ask for directions, memorize a verbal description, or learn the space by trial and error. A tactile map provides that missing mental model, but producing one is usually a slow, specialist commission that many libraries, schools, clinics, and small businesses cannot justify.
