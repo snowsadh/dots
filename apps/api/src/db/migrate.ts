@@ -1,5 +1,11 @@
-import { migrate } from 'drizzle-orm/bun-sql/migrator'
-import { db } from '.'
+import { migrate as migratePostgres } from 'drizzle-orm/bun-sql/migrator'
+import { migrate as migratePglite } from 'drizzle-orm/pglite/migrator'
+import { pgliteDb, postgresDb } from '.'
 
-await migrate(db, { migrationsFolder: './drizzle' })
-await db.$client.close()
+if (postgresDb) {
+  await migratePostgres(postgresDb, { migrationsFolder: './drizzle' })
+  await postgresDb.$client.close()
+} else if (pgliteDb) {
+  await migratePglite(pgliteDb, { migrationsFolder: './drizzle' })
+  await pgliteDb.$client.close()
+}

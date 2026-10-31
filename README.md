@@ -2,7 +2,7 @@
   <img src="apps/web/public/devpost-banner-v2.png" alt="A floor plan transformed into a raised tactile map with braille labels" width="100%" />
 </p>
 
-<h1 align="center">bumps</h1>
+<h1 align="center">dots</h1>
 
 <p align="center">
   <strong>Floor plan in. Tactile map out.</strong><br />
@@ -19,13 +19,13 @@
 
 <!-- README-HACK:NEEDS-OWNER key="demo-video" instruction="Add the final public YouTube or Vimeo demo URL here." -->
 
-## Why bumps
+## Why dots
 
 A sighted visitor can glance at a lobby map before entering an unfamiliar building. A blind visitor often has to ask for directions, memorize a verbal description, or learn the space by trial and error. A tactile map provides that missing mental model, but producing one is usually a slow, specialist commission that many libraries, schools, clinics, and small businesses cannot justify.
 
-bumps automates the design bottleneck. A building owner uploads the floor plan they already have, reviews what the system understood, and receives printable map and braille-legend STL files. The goal is not to replace human judgment: it is to make a useful accessibility tool practical for far more buildings.
+dots automates the design bottleneck. A building owner uploads the floor plan they already have, reviews what the system understood, and receives printable map and braille-legend STL files. The goal is not to replace human judgment: it is to make a useful accessibility tool practical for far more buildings.
 
-## What bumps does
+## What dots does
 
 1. **Upload:** Accept a PDF, PNG, JPG, or WebP floor plan up to 10 MB. PDFs are rasterized from the first page and large images are normalized for analysis.
 2. **Extract:** Gemini agents on Vertex AI identify walls, rooms, doorways, stairs, elevators, entrances, labels, and other navigational features as structured JSON.
@@ -65,12 +65,12 @@ The Next.js browser app communicates with a Bun and Hono API. Background parse a
 - **Web:** Next.js 16, React 19, TypeScript, Tailwind CSS, Three.js
 - **API:** Bun, Hono, Zod, MuPDF, Resvg
 - **Geometry:** deterministic TypeScript, Manifold 3D, binary STL generation
-- **Data:** PostgreSQL, Drizzle ORM, versioned floor-model JSON
+- **Data:** local PGlite or hosted PostgreSQL, Drizzle ORM, versioned floor-model JSON
 - **Cloud:** Vercel and Google Cloud Run; Render and Cloud SQL deployments; Cloud Build, Artifact Registry, Secret Manager
 
 ## What floor plans can I use?
 
-bumps is designed for many single-floor architectural plans, not one hard-coded demo image. Upload a PDF, PNG, JPG, or WebP file up to 10 MB. For PDFs, the first page is used. The strongest inputs are:
+dots is designed for many single-floor architectural plans, not one hard-coded demo image. Upload a PDF, PNG, JPG, or WebP file up to 10 MB. For PDFs, the first page is used. The strongest inputs are:
 
 - A straight, top-down view of one floor
 - Clearly visible walls and doorway gaps
@@ -87,7 +87,6 @@ The repository includes several different houses, schools, hotels, museums, and 
 - Git
 - Google Cloud CLI
 - A Google Cloud project with Vertex AI access
-- PostgreSQL 17, either installed locally or running in a container
 
 Verify the required tools:
 
@@ -100,8 +99,8 @@ git --version
 ### 2. Clone and install the exact dependency set
 
 ```bash
-git clone https://github.com/vimzh/bumps.git
-cd bumps
+git clone https://github.com/snowsadh/dots.git
+cd dots
 bun install --frozen-lockfile
 cp apps/api/.env.example apps/api/.env
 cp apps/web/.env.example apps/web/.env.local
@@ -109,26 +108,9 @@ cp apps/web/.env.example apps/web/.env.local
 
 The frozen lockfile keeps the installed versions consistent with the tested repository state.
 
-### 3. Start PostgreSQL
+### 3. Use the local database
 
-Use any reachable PostgreSQL database. On macOS, use Colima as the Docker runtime and start it first if necessary:
-
-```bash
-colima status || colima start
-```
-
-Then start a disposable PostgreSQL 17 database:
-
-```bash
-docker run --name bumps-postgres \
-  -e POSTGRES_USER=bumps \
-  -e POSTGRES_PASSWORD=bumps \
-  -e POSTGRES_DB=bumps \
-  -p 5432:5432 \
-  -d postgres:17-alpine
-```
-
-If port 5432 is already occupied, use your existing PostgreSQL instance and change `DATABASE_URL` accordingly.
+The API uses PGlite in `apps/api/data/pglite` when `DATABASE_URL` is unset. It needs no database server or container. This local database is separate from the hosted PostgreSQL databases and does not modify their records.
 
 ### 4. Authenticate with Vertex AI
 
@@ -138,7 +120,7 @@ gcloud config set project <your-project-id>
 gcloud services enable aiplatform.googleapis.com
 ```
 
-Your Google account or service account needs permission to invoke Vertex AI models in that project. bumps uses Gemini through Vertex AI; no third-party model gateway is required.
+Your Google account or service account needs permission to invoke Vertex AI models in that project. dots uses Gemini through Vertex AI; no third-party model gateway is required.
 
 ### 5. Configure the API and web app
 
@@ -154,7 +136,6 @@ MODEL_CRITICAL=gemini-3.7-flash
 MODEL_FAST=gemini-3.7-flash
 MODEL_LAYOUT=gemini-3.7-flash
 MODEL_COMPARE=gemini-3.7-flash
-DATABASE_URL=postgresql://bumps:bumps@localhost:5432/bumps
 UPLOADS_DIR=data/uploads
 ```
 
@@ -165,6 +146,8 @@ NEXT_PUBLIC_API_URL=http://localhost:3003
 ```
 
 Do not commit either environment file.
+
+Leave `DATABASE_URL` unset for local PGlite. Set it to a PostgreSQL connection URL only when you intentionally use an external database.
 
 ### 6. Migrate and start both services
 
@@ -221,7 +204,7 @@ Increasing either limit allows more agent repair attempts but also increases Ver
 
 ## Prototype boundaries and next steps
 
-The current product handles one floor per uploaded map and works best with clear, top-down architectural plans. PostgreSQL preserves project metadata and model versions, but source images and STL files still use ephemeral container storage.
+The current product handles one floor per uploaded map and works best with clear, top-down architectural plans. Local PGlite or hosted PostgreSQL preserves project metadata and model versions, but source images and STL files still use ephemeral container storage on hosted services.
 
 Next steps are durable object storage, multi-floor navigation, contracted braille and additional languages, more physical print testing with blind readers, and outdoor public-space input.
 

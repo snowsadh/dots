@@ -1,4 +1,4 @@
-# Deploying bumps
+# Deploying dots
 
 The web app runs on Vercel and Google Cloud Run. The Bun/Hono API and PostgreSQL database run in Render's Singapore region, with a second Google Cloud deployment for proof.
 
@@ -16,7 +16,7 @@ Health check: /
 
 The start command applies pending Drizzle migrations before accepting requests. Configure the model provider and API key in Render as documented in `apps/api/.env.example`.
 
-This is a fresh-database cutover. Existing local SQLite demo records are not copied because their stored upload and export paths are not valid on Render.
+Local PGlite records stay separate from the hosted PostgreSQL database. This setup does not migrate or modify existing hosted records; local upload and export paths would not be valid on Render.
 
 ## Web on Vercel
 
