@@ -1,4 +1,33 @@
 export const landingContent = {
+  howItWorks: {
+    title: "How it works",
+    steps: [
+      {
+        title: "Upload",
+        description: "Start with a PDF or image of one floor.",
+        image: "/how-it-works/upload.svg",
+        alt: "Floor plan file moving into an upload window",
+      },
+      {
+        title: "Output STL",
+        description: "Review the tactile map, then download its 3D-printable STL.",
+        image: "/how-it-works/output-stl.svg",
+        alt: "Isometric illustration of a tactile map ready to export",
+      },
+      {
+        title: "3D printed",
+        description: "Print the raised map on a consumer 3D printer.",
+        image: "/how-it-works/3d-printed.jpg",
+        alt: "A turquoise tactile map on a 3D printer bed",
+      },
+      {
+        title: "Final",
+        description: "A finished map you can explore by touch.",
+        image: "/how-it-works/final.jpg",
+        alt: "Finished turquoise tactile map held in one hand",
+      },
+    ],
+  },
   hero: {
     brand: "dots",
     subheading:

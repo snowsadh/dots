@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" fill="none">
+  <rect width="600" height="750" fill="#E8EFEC"/>
+  <rect x="73" y="105" width="454" height="526" rx="8" fill="#FCFCFA" stroke="#34413F" stroke-width="2"/>
+  <path d="M73 161H527" stroke="#34413F" stroke-width="2"/>
+  <circle cx="104" cy="133" r="5" fill="#34413F"/>
+  <circle cx="125" cy="133" r="5" fill="#BAC8C3"/>
+  <circle cx="146" cy="133" r="5" fill="#BAC8C3"/>
+  <path d="M300 210V278 M300 278L284 262 M300 278L316 262" stroke="#345B58" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 427L265 497L492 390V416L265 523L120 453V427Z" fill="#75A9A7" stroke="#345B58" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M120 427L347 320L492 390L265 497L120 427Z" fill="#B6DEDC" stroke="#345B58" stroke-width="3" stroke-linejoin="round"/>
+  <g transform="matrix(1 -0.47 1 0.47 120 427)" stroke="#345B58" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 21H208V130H21V21Z M60 21V88H122 M122 45V130 M60 88V130 M122 45H208 M161 45V92H208" stroke-width="3.5"/>
+    <path d="M37 40H47 M37 48H47 M145 108H155 M145 116H155 M175 60H185 M175 68H185" stroke-width="3" stroke-dasharray="1 6"/>
+    <circle cx="42" cy="106" r="4" fill="#345B58" stroke="none"/>
+    <circle cx="188" cy="110" r="4" fill="#345B58" stroke="none"/>
+  </g>
+  <path d="M300 568V597 M300 597L286 583 M300 597L314 583 M272 609H328" stroke="#345B58" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
