@@ -13,11 +13,15 @@
   <a href="output/pdf/bumps-technical-agent-architecture.pdf">Architecture PDF</a>
 </p>
 
-## Why dots
+## Project description
 
-A sighted visitor can glance at a lobby map before entering an unfamiliar building. A blind visitor often has to ask for directions, memorize a verbal description, or learn the space by trial and error. A tactile map provides that missing mental model, but producing one is usually a slow, specialist commission that many libraries, schools, clinics, and small businesses cannot justify.
+dots turns a floor plan into a 3D-printable tactile map. A tactile map is a raised floor plan that people read with their fingertips. It helps blind and low-vision visitors understand a building before they enter it. However, most buildings do not have tactile maps. Custom maps require specialist work, can take weeks, and often cost too much for small organizations. dots makes this process faster and more affordable.
 
-dots automates the design bottleneck. A building owner uploads the floor plan they already have, reviews what the system understood, and receives printable map and braille-legend STL files. The goal is not to replace human judgment: it is to make a useful accessibility tool practical for far more buildings.
+Upload a PDF, an architectural drawing, or a photo of an evacuation plan. A coordinated multi-agent vision pipeline converts the image into a structured spatial model. A parser agent identifies walls, rooms, doors, stairs, and other important features. A critic agent compares this model with the source image and identifies extraction errors. The pipeline repeats this process up to five times to improve the model and flags remaining uncertainty for review.
+
+A dedicated doorway auditor then examines every entrance against an enlarged crop of the original image. This independent verification stage reduces the risk of missing, misplaced, or incorrectly oriented doors. You can review the verified model on an editable canvas. Select an element to correct it, or describe the correction in plain English. The agents then update the spatial model while preserving the remaining layout.
+
+Deterministic geometry code converts the approved model into a tactile design. It validates relief height, element spacing, minimum feature size, braille geometry, and printability against BANA 2022 and ADA 703 specifications. The AI agents interpret and refine the floor plan, but deterministic code controls compliance and export. The system produces a watertight STL file and a matching braille legend plate only after every validation check passes. You can print both files on a consumer 3D printer with a few dollars of material.
 
 ## What dots does
 
