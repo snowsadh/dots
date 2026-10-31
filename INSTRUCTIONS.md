@@ -1,6 +1,6 @@
-# Running bumps
+# Running dots
 
-bumps turns a floor plan image into a 3D-printable tactile map for blind
+dots turns a floor plan image into a 3D-printable tactile map for blind
 navigation. This guide takes you from a clean machine to a downloaded STL.
 
 ## Prerequisites

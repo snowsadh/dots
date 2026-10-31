@@ -9,8 +9,8 @@ The official requirements say the demo video must show the application working a
 3. **Cloud Run logs:** <https://console.cloud.google.com/logs/query;query=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22bumps-api%22?project=project-1ba74e2d-51e2-4753-b63>
 4. **Cloud SQL instance:** <https://console.cloud.google.com/sql/instances/bumps-postgres/overview?project=project-1ba74e2d-51e2-4753-b63>
 5. **Live Google Cloud endpoint:** <https://bumps-api-1096378308677.asia-south1.run.app>
-6. **Code repository:** <https://github.com/vimzh/bumps>
-7. **Architecture and setup instructions:** <https://github.com/vimzh/bumps#readme>
+6. **Code repository:** <https://github.com/snowsadh/dots>
+7. **Architecture and setup instructions:** <https://github.com/snowsadh/dots#readme>
 8. **Official submission requirements:** <https://allthingsagentichackathon.devpost.com/#requirements>
 9. **Official FAQ:** <https://allthingsagentichackathon.devpost.com/details/faqs>
 

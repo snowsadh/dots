@@ -1,6 +1,6 @@
 # Tactile map references
 
-Real-world tactile maps for blind readers, paired where possible with a visual plan of the same building. Use these as ground truth for what deployed tactile maps look like (symbols, braille keys, legends, guide paths) and to compare against bumps output.
+Real-world tactile maps for blind readers, paired where possible with a visual plan of the same building. Use these as ground truth for what deployed tactile maps look like (symbols, braille keys, legends, guide paths) and to compare against dots output.
 
 ## Pairs
 
@@ -15,6 +15,6 @@ Real-world tactile maps for blind readers, paired where possible with a visual p
 ## Combined visual + tactile signs (one artifact is both)
 
 - `wanchai-market-braille-tactile-sign.jpg` — Wan Chai Market braille + tactile floor plan: raised colored map, guide path, entrances, stalls, full bilingual legend with braille. [Commons](https://commons.wikimedia.org/wiki/File:HK_Wan_Chai_Road_Zenith_Block_3_indoor_Market_braille_and_tactile_map_floorplan_sign_Dec-2014.jpg)
-- `teaware-museum-tactile-sign.jpg` — Flagstaff House Museum of Tea Ware tactile map: two floors side by side, galleries with braille keys, legend. A very clean model of the plate + legend layout bumps generates. [Commons](https://commons.wikimedia.org/wiki/File:HK_Park_%E9%A6%99%E6%B8%AF%E8%8C%B6%E5%85%B7%E6%96%87%E7%89%A9%E9%A4%A8_Museum_of_Tea_ware_%E6%97%97%E6%9D%86%E5%B1%8B_Flagstaff_House_exhibition_halls_Tactile_map_sign_Dec-2013.JPG)
+- `teaware-museum-tactile-sign.jpg` — Flagstaff House Museum of Tea Ware tactile map: two floors side by side, galleries with braille keys, legend. A very clean model of the plate + legend layout dots generates. [Commons](https://commons.wikimedia.org/wiki/File:HK_Park_%E9%A6%99%E6%B8%AF%E8%8C%B6%E5%85%B7%E6%96%87%E7%89%A9%E9%A4%A8_Museum_of_Tea_ware_%E6%97%97%E6%9D%86%E5%B1%8B_Flagstaff_House_exhibition_halls_Tactile_map_sign_Dec-2013.JPG)
 
 Commons files carry free licenses — see each file page for the exact license and attribution requirements.

@@ -4,9 +4,9 @@ A sighted visitor can glance at a floor plan and understand an unfamiliar buildi
 
 Tactile maps provide it through touch, but producing one usually takes specialist knowledge, significant cost, and weeks of manual work.
 
-For the #AllThingsAgentic Hackathon, I built bumps — maps you can feel.
+For the #AllThingsAgentic Hackathon, I built dots — maps you can feel.
 
-bumps turns an ordinary floor plan into a standards-validated, 3D-printable tactile map in minutes:
+dots turns an ordinary floor plan into a standards-validated, 3D-printable tactile map in minutes:
 
 - Gemini agents extract walls, rooms, doors, labels, and accessibility features.
 - A critic agent compares the extraction with the original plan and drives a bounded correction loop.
@@ -15,7 +15,7 @@ bumps turns an ordinary floor plan into a standards-validated, 3D-printable tact
 
 The engineering principle is simple: agents make the decisions; geometry enforces the rules. If a measurable violation remains, export stays blocked.
 
-I built bumps solo with Gemini 3.7 Flash, Google ADK, Vertex AI, Google Cloud Run, TypeScript, Next.js, Bun, Hono, PostgreSQL, and Three.js.
+I built dots solo with Gemini 3.7 Flash, Google ADK, Vertex AI, Google Cloud Run, TypeScript, Next.js, Bun, Hono, PostgreSQL, and Three.js.
 
 There is more work ahead—especially testing physical prints with blind and low-vision users—but this is a meaningful step toward making tactile wayfinding faster and more accessible to schools, libraries, hospitals, museums, and other public spaces.
 

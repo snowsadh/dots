@@ -1,4 +1,4 @@
-# bumps compliance & validation report
+# dots compliance & validation report
 
 **Current status (2026-08-30):** corpus v2 contains 30 unique real-plan/real-tactile-reference pairs and all 30 asset pairs are prepared. Seven venues have been attempted with Gemini only. Three produced a complete, self-consistent three-image comparison; four stopped at a named model/network failure. This is a meaningful baseline, not a completed 30-run study.
 
@@ -16,7 +16,7 @@ Two metric families remain separate:
 
 Every value below is a constant in `packages/floor-model` and enforced by the validator (`validate.ts`); export is blocked at any violation. Audit method: code inspection + the validator's own test suite (30 tests passing).
 
-| Parameter | bumps value | Standard | Conforms |
+| Parameter | dots value | Standard | Conforms |
 |---|---|---|---|
 | Braille dot base diameter | 1.5 mm | ADA §703.3: 1.5–1.6 mm | ✔ |
 | Braille dot height | 0.7 mm (spherical cap) | ADA: 0.64–0.94 mm; dome required | ✔ (domes generated from exact cap geometry) |
@@ -48,7 +48,7 @@ Not yet validated physically: FDM print fidelity of 0.7 mm domes (first-layer sq
 
 Eleven artifacts were examined. Conventions observed:
 
-| Concept | Real-world conventions observed | bumps v1 | Fidelity |
+| Concept | Real-world conventions observed | dots v1 | Fidelity |
 |---|---|---|---|
 | **Walls** | Raised continuous lines universally (MAD Lab emboss: dotted-texture ridge; CCH legend: "WAND" = solid bar; QMH: raised outlines) | 2 mm raised solid lines | **Match** |
 | **Doorways** | Break/gap in the wall line; MAD Lab additionally places a small raised marker *in* the gap | Gap in wall line (≥6 mm) | **Match** (marker-in-gap is a nice-to-have) |

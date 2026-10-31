@@ -1,8 +1,8 @@
-# bumps improvement changelog
+# dots improvement changelog
 
-This is the build story of bumps, from a one-pass floor-plan parser to a web app that produces reviewed, standards-checked, 3D-printable tactile maps.
+This is the build story of dots, from a one-pass floor-plan parser to a web app that produces reviewed, standards-checked, 3D-printable tactile maps.
 
-We are removing the friction that keeps government buildings, public venues, and businesses from providing tactile maps for blind and low-vision visitors. Today, creating one usually means paying for a custom commission and waiting weeks for a specialist to model the space. bumps turns that process into a workflow that takes minutes: upload a floor plan, review the extracted layout, and receive a clear, 3D-printable STL. The goal is to make accessibility practical enough that more organizations can offer it in the places people use every day.
+We are removing the friction that keeps government buildings, public venues, and businesses from providing tactile maps for blind and low-vision visitors. Today, creating one usually means paying for a custom commission and waiting weeks for a specialist to model the space. dots turns that process into a workflow that takes minutes: upload a floor plan, review the extracted layout, and receive a clear, 3D-printable STL. The goal is to make accessibility practical enough that more organizations can offer it in the places people use every day.
 
 ## How to read this changelog
 
@@ -184,4 +184,4 @@ The system reduces that risk with visual critique, detail crops, deterministic s
 
 The most useful agent is not the one that acts most independently. It is the one that knows exactly where its judgment ends.
 
-In bumps, model intelligence improved the result when it interpreted images, compared alternatives, and explained uncertainty. Reliability improved when code handled measurements, topology, repair, and export. The product became usable when we stopped asking the model to be good at everything and made every failure visible to the next person in the loop.
+In dots, model intelligence improved the result when it interpreted images, compared alternatives, and explained uncertainty. Reliability improved when code handled measurements, topology, repair, and export. The product became usable when we stopped asking the model to be good at everything and made every failure visible to the next person in the loop.

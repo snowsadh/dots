@@ -1,16 +1,16 @@
-# Building bumps: From Floor Plans to 3D-Printable Tactile Maps with Gemini
+# Building dots: From Floor Plans to 3D-Printable Tactile Maps with Gemini
 
 _How an agentic review pipeline, deterministic accessibility validator, and constrained geometry system turn visual building plans into maps blind users can feel._
 
 I created this article for the purposes of entering the All Things Agentic Hackathon.
 
-![bumps converts a visual floor plan into a tactile map for blind navigation](./assets/medium/bumps-cover.png)
+![dots converts a visual floor plan into a tactile map for blind navigation](./assets/medium/bumps-cover.png)
 
-**bumps is a web application that converts an ordinary floor plan into a standards-validated, 3D-printable tactile map for blind and low-vision users.** A user uploads a PDF or image, reviews the extracted structure on an editable canvas, converts it into tactile geometry, and downloads a watertight STL with braille keys and a matching legend plate.
+**dots is a web application that converts an ordinary floor plan into a standards-validated, 3D-printable tactile map for blind and low-vision users.** A user uploads a PDF or image, reviews the extracted structure on an editable canvas, converts it into tactile geometry, and downloads a watertight STL with braille keys and a matching legend plate.
 
 The product is intended to compress a specialist workflow that can take weeks into a guided process that takes minutes. It does not ask a language model to generate a plausible-looking mesh. It builds a typed representation of the building, exposes uncertainty for human review, and refuses export when deterministic measurements fail.
 
-## What bumps actually does
+## What dots actually does
 
 The user journey has four stages:
 
@@ -19,9 +19,9 @@ The user journey has four stages:
 3. **Tactile:** deterministic code simplifies visual detail, applies the tactile symbol vocabulary, generates braille keys and a legend, selects an appropriate plate grid, and measures every result in millimetres.
 4. **Export:** only a zero-violation design is extruded, checked for watertightness, previewed in Three.js, and written as one or more binary STL files.
 
-That end-to-end flow is the reason I built bumps as an agentic system rather than a collection of disconnected AI features. Each stage produces evidence and constraints for the next stage. The agents do not merely answer prompts; they advance a persistent physical-design workflow under explicit gates.
+That end-to-end flow is the reason I built dots as an agentic system rather than a collection of disconnected AI features. Each stage produces evidence and constraints for the next stage. The agents do not merely answer prompts; they advance a persistent physical-design workflow under explicit gates.
 
-The hardest part of building **bumps** was not generating an STL.
+The hardest part of building **dots** was not generating an STL.
 
 The hard part was taking an architectural drawing made for sighted readers and extracting a model accurate enough to become physical information beneath someone’s fingertips.
 
@@ -41,7 +41,7 @@ I use “agentic” here in a narrow engineering sense. The system accepts a goa
 
 The Parser Agent does not hand its first answer directly to the editor. Its output is normalized, rendered, structurally audited, and reviewed by a separate Critique Agent. The Tactile Layout Agent does not declare success after proposing a visually convincing arrangement. Its moves are applied to the real design and checked again by the same deterministic validator that guards export.
 
-This distinction matters because a linear prompt chain can produce several outputs without taking responsibility for the state transitions between them. bumps makes those transitions explicit: schema validation, confidence gates, critique findings, typed edits, measured violations, and an HTTP 409 export failure when the physical contract is not satisfied.
+This distinction matters because a linear prompt chain can produce several outputs without taking responsibility for the state transitions between them. dots makes those transitions explicit: schema validation, confidence gates, critique findings, typed edits, measured violations, and an HTTP 409 export failure when the physical contract is not satisfied.
 
 ## Why Gemini fits this problem unusually well
 
@@ -189,7 +189,7 @@ The validator measures:
 
 Large plans are especially important. A visual interface can shrink a complex building until it fits. A fingertip cannot suddenly resolve smaller features.
 
-bumps tries plate grids from 1 × 1 through 4 × 4 and selects the smallest grid that preserves navigation-critical widths. If even the largest grid cannot remain touch-readable, the scale gate fails loudly.
+dots tries plate grids from 1 × 1 through 4 × 4 and selects the smallest grid that preserves navigation-critical widths. If even the largest grid cannot remain touch-readable, the scale gate fails loudly.
 
 The export API checks the stored `valid` flag. A design with violations receives an HTTP 409 response and no STL is produced.
 
@@ -260,7 +260,7 @@ Each role sees a different slice of the problem, but the intelligence underneath
 
 The most important next step is testing physical prints with blind and visually impaired users. A validator can prove that measurements pass the encoded rules. It cannot replace lived experience.
 
-I also want to extend bumps with contracted braille, additional languages, and outdoor tactile maps for campuses, parks, and public spaces.
+I also want to extend dots with contracted braille, additional languages, and outdoor tactile maps for campuses, parks, and public spaces.
 
 The long-term goal remains simple: if an organization has a floor plan and access to a consumer 3D printer, it should be able to produce a useful tactile map without commissioning weeks of expensive specialist work.
 
@@ -268,7 +268,7 @@ Gemini is what made that goal technically believable for me. It collapsed a frag
 
 That is the kind of agentic AI I want to keep building: not a model that merely produces impressive output, but one that can participate in a system designed to earn trust.
 
-## Why I entered bumps in the All Things Agentic Hackathon
+## Why I entered dots in the All Things Agentic Hackathon
 
 The Taskmaster track asks for agents that take a goal and carry out multi-step work. “Upload a floor plan and produce a printable tactile map” is exactly that kind of goal: it crosses multimodal perception, review, human correction, standards conversion, spatial optimization, and mesh generation.
 
@@ -278,10 +278,10 @@ That makes the agent work visible, but it also makes the product honest. A blind
 
 ---
 
-**bumps was built solo for the #AllThingsAgentic Hackathon using Gemini 3.7 Flash, Google ADK for TypeScript, Next.js, Bun, Hono, Three.js, manifold-3d, PostgreSQL, Vercel, Render, and Google Cloud Run.**
+**dots was built solo for the #AllThingsAgentic Hackathon using Gemini 3.7 Flash, Google ADK for TypeScript, Next.js, Bun, Hono, Three.js, manifold-3d, PostgreSQL, Vercel, Render, and Google Cloud Run.**
 
-Live demo: [bumps on Google Cloud Run](https://bumps-web-1096378308677.asia-south1.run.app/)
+Live demo: [dots on Google Cloud Run](https://bumps-web-1096378308677.asia-south1.run.app/)
 
-Source code and reproducible testing instructions: [github.com/vimzh/bumps](https://github.com/vimzh/bumps)
+Source code and reproducible testing instructions: [github.com/snowsadh/dots](https://github.com/snowsadh/dots)
 
 #AllThingsAgentic #Gemini #GoogleADK #GoogleCloud #AIAgents #Accessibility #3DPrinting
