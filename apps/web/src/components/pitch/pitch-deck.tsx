@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { pitchSlides } from "@/data/pitch";
+import { siteContent } from "@/data/site";
 import styles from "./pitch-deck.module.css";
 
 type PitchDeckProps = {
@@ -64,7 +65,7 @@ export function PitchDeck({ fontClassName }: PitchDeckProps) {
         <section className={`${styles.slide} ${styles.visitorSlide}`} aria-labelledby="visitor-title">
           <div className={styles.visitorCopy}>
             <header className={styles.topline}>
-              <span className={styles.brand}>bumps</span>
+              <span className={styles.brand}>{siteContent.title}</span>
               <span>{slide.section}</span>
             </header>
             <div className={styles.headlineGroup}>
@@ -90,7 +91,7 @@ export function PitchDeck({ fontClassName }: PitchDeckProps) {
         <section className={`${styles.slide} ${styles.bottleneckSlide}`} aria-labelledby="bottleneck-title">
           <div className={styles.bottleneckCopy}>
             <header className={styles.topline}>
-              <span className={styles.brand}>bumps</span>
+              <span className={styles.brand}>{siteContent.title}</span>
               <span>{slide.section}</span>
             </header>
             <div className={styles.headlineGroup}>
@@ -113,7 +114,7 @@ export function PitchDeck({ fontClassName }: PitchDeckProps) {
       {slide.id === "agent" && (
         <section className={`${styles.slide} ${styles.agentSlide}`} aria-labelledby="agent-title">
           <header className={styles.topline}>
-            <span className={styles.brand}>bumps</span>
+            <span className={styles.brand}>{siteContent.title}</span>
             <span>{slide.section}</span>
           </header>
           <div className={styles.agentHeading}>

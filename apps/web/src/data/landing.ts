@@ -1,6 +1,6 @@
 export const landingContent = {
   hero: {
-    brand: "bumps",
+    brand: "dots",
     subheading:
       "Create tactile maps for visually impaired visitors in minutes, not weeks.",
     tagline:
