@@ -15,15 +15,13 @@ export function HowItWorks() {
           {landingContent.howItWorks.steps.map((step, index) => (
             <li key={step.title}>
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm border bg-muted">
-                {index < 2 ? (
-                  <Image
-                    alt={step.alt}
-                    className="object-cover"
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    src={step.image}
-                  />
-                ) : null}
+                <Image
+                  alt={step.alt}
+                  className="object-cover"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  src={step.image}
+                />
               </div>
               <div className="mt-5 flex items-baseline gap-4">
                 <span className="font-mono text-xs text-muted-foreground">
