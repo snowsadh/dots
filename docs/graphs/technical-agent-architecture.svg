@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description" data-layout-version="cloudy-native-v2" data-spec-sha256="d65388b2b27243f4857b0b99d2ddf681433c426c0e7dba07ab59cbb7957ad234">
   <title id="title">Agent pipeline: floor plan to validated STL</title>
-  <desc id="description">Technical architecture of the reachable bumps pipeline from upload preprocessing through five Gemini agents, human review, deterministic tactile validation, and STL export.</desc>
+  <desc id="description">Technical architecture of the reachable dots pipeline from upload preprocessing through five Gemini agents, human review, deterministic tactile validation, and STL export.</desc>
   <defs>
     <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
     <marker id="arrow-violet" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/></marker>

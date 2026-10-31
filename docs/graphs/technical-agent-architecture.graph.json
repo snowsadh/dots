@@ -1,7 +1,7 @@
 {
   "title": "Agent pipeline: floor plan to validated STL",
   "subtitle": "Five Vertex AI agents exchange constrained JSON; TypeScript owns loops, persistence, validation, and export gates",
-  "description": "Technical architecture of the reachable bumps pipeline from upload preprocessing through five Gemini agents, human review, deterministic tactile validation, and STL export.",
+  "description": "Technical architecture of the reachable dots pipeline from upload preprocessing through five Gemini agents, human review, deterministic tactile validation, and STL export.",
   "footer": "Five ADK LlmAgents use Gemini on Vertex AI. TypeScript owns loops, schema gates, persistence, and STL authorization.",
   "zones": [
     {"id": "ingress", "label": "1 · INGEST + ORCHESTRATION", "tone": "blue", "width": 1.15},
