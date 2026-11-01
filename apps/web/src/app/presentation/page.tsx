@@ -4,6 +4,6 @@ import { investorMetadata } from "@/data/investor";
 
 export const metadata: Metadata = investorMetadata;
 
-export default function PresentRightRoutePage() {
+export default function PresentationPage() {
   return <InvestorDeck />;
 }
